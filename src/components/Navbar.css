@@ -1,6 +1,6 @@
 .container {
   display: flex;
-  max-width: 90%;
+  max-width: 80%;
   margin: 0 auto;
 }
 
@@ -8,8 +8,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 60px;
+  padding: 20px 150px;
   background-color: navy;
+}
+
+.left-side {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .nav-links {
@@ -25,8 +31,7 @@
 }
 
 .logo {
-  color: #fff;
-  font-size: 34px;
+  color: white;
 }
 
 .footer {

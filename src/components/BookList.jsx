@@ -1,16 +1,26 @@
-import React from 'react'
+import React from 'react';
+import { useSelector } from 'react-redux';
+import { selectBooks } from '../redux/books/books';
+import './BookList.css';
 
-const BookList = ({books}) => {
-  console.log(books)
+const BookList = () => {
+  const books = useSelector(selectBooks);
+
   return (
-    <ul>
+    <ul className="list-group">
       {books.map((book) => (
-        <li key={book.id}>
-            {book.title} {book.author}
+        <li className="list-item" key={book.id}>
+          <p>{book.title}</p>
+          <p>{book.author}</p>
+          <div className="btns">
+            <button type="button">Comment</button>
+            <button type="button">Remove</button>
+            <button type="button">Edit</button>
+          </div>
         </li>
       ))}
     </ul>
   );
-}
+};
 
-export default BookList
+export default BookList;
