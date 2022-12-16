@@ -1,31 +1,24 @@
-import PropTypes from 'prop-types';
-import { useDispatch } from 'react-redux';
-import { removeBook } from '../redux/books/books';
+import { NavLink } from 'react-router-dom';
 
-function Book({ title, author, id }) {
-  const dispatch = useDispatch();
+function Header() {
   return (
-    <>
-      <span>
-        {title}
-        <span> by </span>
-        {author}
-      </span>
-      <button
-        type="button"
-        onClick={() => {
-          dispatch(removeBook({ title, author, id }));
-        }}
-      >
-        Remove
-      </button>
-    </>
+    <div className="Header">
+      <h1>Bookstore</h1>
+      <ul>
+        <li>
+          <NavLink to="/" className="links">
+            Books
+          </NavLink>
+        </li>
+        <li>
+          {' '}
+          <NavLink to="Categories" className="links">
+            Categories
+          </NavLink>
+        </li>
+      </ul>
+    </div>
   );
 }
 
-export default Book;
-Book.propTypes = {
-  title: PropTypes.string.isRequired,
-  author: PropTypes.string.isRequired,
-  id: PropTypes.number.isRequired,
-};
+export default Header;

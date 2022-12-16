@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux';
-import Book from './Books';
+import Book from './Book';
 
 function BookList() {
   const books = useSelector((state) => state.books);

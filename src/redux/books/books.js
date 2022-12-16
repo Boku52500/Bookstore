@@ -44,6 +44,8 @@ export const addBook = (book) => ({
   book,
 });
 
+// side effects, only as applicable
+// e.g. thunks, epics, etc
 export const removeBook = (book) => ({
   type: REMOVE,
   book,

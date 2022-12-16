@@ -1,8 +1,8 @@
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
-import Header from './components/Header';
-import Books from './components/Books';
-import Catigoties from './components/Catigories';
+import Header from './components/Home';
+import Books from './components/pages/Books';
+import Catigoties from './components/pages/Categories';
 
 function App() {
   return (

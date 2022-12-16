@@ -1,5 +1,5 @@
-import BookList from './BookList';
-import AddBookForm from './Form';
+import BookList from '../BookList';
+import AddBookForm from '../Form';
 
 function Books() {
   return (
