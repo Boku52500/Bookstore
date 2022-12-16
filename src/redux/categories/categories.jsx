@@ -1,17 +1,21 @@
-/* eslint no-param-reassign: 0 */
-import { createSlice } from '@reduxjs/toolkit';
+const CHECK_STATUS = './redux/CHECK_STATUS';
 
-const categoriesSlice = createSlice({
-  name: 'categories',
-  initialState: { categories: [], showText: false },
-  reducers: {
-    toggleText(state) {
-      state.showText = !state.showText;
-    },
-  },
-});
+const innitialState = [];
 
-export const selectTect = (state) => state.categories;
-export const categoriesActions = categoriesSlice.actions;
+export default function statusReducer(state = innitialState, action) {
+  switch (action.type) {
+    case CHECK_STATUS:
+      return [
+        ...state,
+        'Under Construction',
+      ];
+    default: return state;
+  }
+}
 
-export default categoriesSlice.reducer;
+export function checkStatus(book) {
+  return {
+    type: CHECK_STATUS,
+    book,
+  };
+}

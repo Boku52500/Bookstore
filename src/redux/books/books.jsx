@@ -1,15 +1,26 @@
-import { createSlice } from '@reduxjs/toolkit';
+const ADD = './redux/ADD';
+const DELETE = './redux/DELETE';
 
-export const bookSlice = createSlice({
-  name: 'books',
-  initialState: [],
-  reducers: {
-    bookAdded(state, action) {
-      state.push(action.payload);
-    },
-  },
-});
+export default function bookReducer(state = [], action) {
+  switch (action.type) {
+    case ADD:
+      return [
+        ...state,
+        {
+          id: action.id,
+          name: action.name,
+          author: action.author,
+        },
+      ];
+    case DELETE:
+      return state.filter((book) => book.id !== action.id);
+    default: return state;
+  }
+}
 
-export const selectBooks = (state) => state.books;
-export const { bookAdded } = bookSlice.actions;
-export default bookSlice.reducer;
+export function createBook(book) {
+  return {
+    type: ADD,
+    book,
+  };
+}
