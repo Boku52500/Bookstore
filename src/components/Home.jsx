@@ -1,24 +1,31 @@
-import React from 'react';
-import Book from './Book';
-import Form from './Form';
+import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+import { removeBook } from '../redux/books/books';
 
-const Home = () => (
-  <div className="listContainer">
-    <div className="bookDiv">
-      <Book title="Book1" author="Author1" />
-      <button type="button">Remove</button>
-    </div>
-    <div className="bookDiv">
-      <Book title="Book2" author="Author2" />
-      <button type="button">Remove</button>
-    </div>
-    <div className="bookDiv">
-      <Book title="Book3" author="Author3" />
-      <button type="button">Remove</button>
-    </div>
-    <h2 className="newBook">Add new book</h2>
-    <Form />
-  </div>
-);
+function Book({ title, author, id }) {
+  const dispatch = useDispatch();
+  return (
+    <>
+      <span>
+        {title}
+        <span> by </span>
+        {author}
+      </span>
+      <button
+        type="button"
+        onClick={() => {
+          dispatch(removeBook({ title, author, id }));
+        }}
+      >
+        Remove
+      </button>
+    </>
+  );
+}
 
-export default Home;
+export default Book;
+Book.propTypes = {
+  title: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
+};

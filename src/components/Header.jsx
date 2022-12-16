@@ -1,15 +1,23 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 function Header() {
   return (
-    <nav>
+    <div className="Header">
       <h1>Bookstore</h1>
-      <div className="link">
-        <li><Link to="/" style={{ textDecoration: 'none' }}>Books</Link></li>
-        <li><Link to="/Categories" style={{ textDecoration: 'none' }}>Categories</Link></li>
-      </div>
-    </nav>
+      <ul>
+        <li>
+          <NavLink to="/" className="links">
+            Books
+          </NavLink>
+        </li>
+        <li>
+          {' '}
+          <NavLink to="Categories" className="links">
+            Categories
+          </NavLink>
+        </li>
+      </ul>
+    </div>
   );
 }
 

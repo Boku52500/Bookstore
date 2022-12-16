@@ -1,22 +1,47 @@
-import React from 'react';
+import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { v4 as uuidv4 } from 'uuid';
+import { addBook } from '../redux/books/books';
 
-const Form = () => (
-  <div className="formContainer">
+function AddFormBook() {
+  const dispatch = useDispatch();
+  const [title, setTitle] = useState('');
+  const [author, setAuthor] = useState('');
+  return (
     <form>
+      <h2>Add a book</h2>
       <input
+        placeholder="Book Title"
         type="text"
-        className="input-text"
-        placeholder="Add title"
         name="title"
+        value={title}
+        onInput={(e) => setTitle(e.target.value)}
       />
       <input
+        placeholder="Author Name"
         type="text"
-        className="input-text"
-        placeholder="Add author"
         name="author"
+        value={author}
+        onInput={(e) => setAuthor(e.target.value)}
       />
+      <button
+        type="button"
+        onClick={() => {
+          dispatch(
+            addBook({
+              title,
+              author,
+              id: uuidv4(),
+            }),
+          );
+          setAuthor('');
+          setTitle('');
+        }}
+      >
+        Add Book
+      </button>
     </form>
-  </div>
-);
+  );
+}
 
-export default Form;
+export default AddFormBook;

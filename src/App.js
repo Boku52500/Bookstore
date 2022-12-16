@@ -1,20 +1,21 @@
 import './App.css';
-import React from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Home from './components/Home';
+import { Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
-import Categories from './components/Categories';
+import Books from './components/Books';
+import Catigoties from './components/Catigories';
 
-const App = () => (
-  <BrowserRouter>
-    <>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/categories" element={<Categories />} />
-      </Routes>
-    </>
-  </BrowserRouter>
-);
+function App() {
+  return (
+    <div className="App">
+      <div className="App">
+        <Header />
+        <Routes>
+          <Route path="/" element={<Books />} />
+          <Route path="/categories" element={<Catigoties />} />
+        </Routes>
+      </div>
+    </div>
+  );
+}
 
 export default App;

@@ -1,26 +1,50 @@
-const ADD = './redux/ADD';
-const DELETE = './redux/DELETE';
+import { v4 as uuidv4 } from 'uuid';
 
-export default function bookReducer(state = [], action) {
+// Actions
+const ADD = 'React-BookStore/Books/Add';
+const REMOVE = 'React-BookStore/Books/Remove';
+const bookList = [
+  { title: 'Book1', author: 'Author1', id: uuidv4() },
+  {
+    title: 'Book2',
+    author: 'Author2',
+    id: uuidv4(),
+  },
+  {
+    title: 'Book3',
+    author: 'Author3',
+    id: uuidv4(),
+  },
+  {
+    title: 'Book4',
+    author: 'Author4',
+    id: uuidv4(),
+  },
+  {
+    title: 'Book5',
+    author: 'Author5',
+    id: uuidv4(),
+  },
+];
+// Reducer
+export default function booksReducer(state = bookList, action = {}) {
   switch (action.type) {
     case ADD:
-      return [
-        ...state,
-        {
-          id: action.id,
-          name: action.name,
-          author: action.author,
-        },
-      ];
-    case DELETE:
-      return state.filter((book) => book.id !== action.id);
-    default: return state;
+      return [...state, action.book];
+    case REMOVE:
+      return state.filter((book) => book.id !== action.book.id);
+    default:
+      return state;
   }
 }
 
-export function createBook(book) {
-  return {
-    type: ADD,
-    book,
-  };
-}
+// Action Creators
+export const addBook = (book) => ({
+  type: ADD,
+  book,
+});
+
+export const removeBook = (book) => ({
+  type: REMOVE,
+  book,
+});

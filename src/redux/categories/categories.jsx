@@ -1,21 +1,18 @@
-const CHECK_STATUS = './redux/CHECK_STATUS';
+// actions
+const CHECK = 'React-BookStore/categories/Check';
 
-const innitialState = [];
-
-export default function statusReducer(state = innitialState, action) {
+// reducer
+export default function categoriesReducer(state = [], action) {
   switch (action.type) {
-    case CHECK_STATUS:
-      return [
-        ...state,
-        'Under Construction',
-      ];
-    default: return state;
+    case CHECK:
+      return action.payload;
+    default:
+      return state;
   }
 }
 
-export function checkStatus(book) {
-  return {
-    type: CHECK_STATUS,
-    book,
-  };
-}
+// action creators
+export const checkStatus = () => ({
+  type: CHECK,
+  payload: 'Under Construction',
+});
