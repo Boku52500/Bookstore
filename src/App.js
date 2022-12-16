@@ -1,18 +1,20 @@
-import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import Books from './components/Books';
-import Categories from './components/Categories';
-import NavBar from './components/NavBar';
+import { Route, Routes } from 'react-router-dom';
+import Header from './components/Home';
+import Books from './components/pages/Books';
+import Catigoties from './components/pages/Categories';
 
 function App() {
   return (
-    <>
-      <NavBar />
-      <Routes>
-        <Route exact path="/" element={<Books />} />
-        <Route path="/categories" element={<Categories />} />
-      </Routes>
-    </>
+    <div className="App">
+      <div className="App">
+        <Header />
+        <Routes>
+          <Route path="/" element={<Books />} />
+          <Route path="/categories" element={<Catigoties />} />
+        </Routes>
+      </div>
+    </div>
   );
 }
 

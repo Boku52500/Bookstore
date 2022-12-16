@@ -1,16 +1,18 @@
-import React from 'react'
+import { useSelector } from 'react-redux';
+import Book from './Book';
 
-const BookList = ({books}) => {
-  console.log(books)
+function BookList() {
+  const books = useSelector((state) => state.books);
+
   return (
     <ul>
       {books.map((book) => (
-        <li key={book.id}>
-            {book.title} {book.author}
+        <li key={book.title}>
+          <Book title={book.title} author={book.author} id={book.id} />
         </li>
       ))}
     </ul>
   );
 }
 
-export default BookList
+export default BookList;
