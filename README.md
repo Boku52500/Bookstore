@@ -1,30 +1,11 @@
 <a name="readme-top"></a>
 
-<!--
-HOW TO USE:
-This is an example of how you may give instructions on setting up your project locally.
-
-Modify this file to match your project and remove sections that don't apply.
-
-REQUIRED SECTIONS:
-- Table of Contents
-- About the Project
-  - Built With
-  - Live Demo
-- Getting Started
-- Authors
-- Future Features
-- Contributing
-- Show your support
-- Acknowledgements
-- License
-
-After you're finished please remove all the comments and instructions!
--->
-
 <div align="center">
 
+  <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
+  <br/>
 
+  <h3><b>Microverse README Template</b></h3>
 
 </div>
 
@@ -54,23 +35,20 @@ After you're finished please remove all the comments and instructions!
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Bookstore] <a name="about-project"></a>
+# 📖 [React-BookStore] <a name="about-project"></a>
 
-> This project is about books. Main feature is keeping track of your books.
+**[React-BookStore]** is a react web application for adding, removing and viewing your favorite books.
 
-**[Bookstore]** is a page, where book lovers gather. The main feature is a keeping track of what you are reading, which can always come in handy for every book lover.
+## 🛠 Built With <a name="built-with"></a>
 
-## 🛠 Built With <a name="built-with">
-- React
-- HTML
-- CSS
-- JavaScript
-
-</a>
-
+  <ul>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+    <li>React</li>
+    <li>Webpack</li>
+  </ul>
 ### Tech Stack <a name="tech-stack"></a>
-
-> This project is built with React.
 
 <details>
   <summary>Client</summary>
@@ -79,20 +57,12 @@ After you're finished please remove all the comments and instructions!
   </ul>
 </details>
 
-<details>
-  <summary>Server</summary>
-  <ul>
-    <li><a href="https://expressjs.com/">Github Pages</a></li>
-  </ul>
-</details>
-
-<!-- Features -->
-
 ### Key Features <a name="key-features"></a>
 
-- **[Bookstore]**
-- **[Books]**
-- **[]**
+- **Single Page Application**
+- **Add Book**
+- **Remove Book**
+- **View Book**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -100,8 +70,7 @@ After you're finished please remove all the comments and instructions!
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-
-- [Live Demo Link](boku52500.github.page/bookstore)
+- [Live Demo Link](https://yourdeployedapplicationlink.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -109,85 +78,58 @@ After you're finished please remove all the comments and instructions!
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-> T
-
 To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
 In order to run this project you need:
-- GitBash
-- Any code editor (VSCode, Atom...)
-- NodeJS
 
+- node.js
+- git
 
 ### Setup
 
 Clone this repository to your desired folder:
 
-<!--
-commands:
+- Open your terminal
 
-```sh
-  cd my-folder
-  git clone git@github.com:myaccount/my-project.git
-```
---->
+- Navigate to the directory where you want to clone the project.
+
+- Clone the project using by running the following command:
+
+`git clone https://github.com/jellywiz/React-BookStore.git`
 
 ### Install
 
-Install this project with:
-
-<!--
-commands:
-
-```sh
-  cd my-project
-  npm install
-  npm run
-```
---->
+Install this project with: node js, run `npm install` in the terminal
 
 ### Usage
 
-To run the project, execute the following command:
+To run the project, run the following command:
 
-<!--
-command:
-
-```sh
-  npm run
-```
---->
+- `npm run build`
+- `npm run start`
 
 ### Run tests
 
 To run tests, run the following command:
 
-<!--
-command:
+- `npm run test`
 
-```sh
-  npm test
-```
---->
+### Deployment
 
-
+You can deploy this project using: `npm run deploy`
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- AUTHORS -->
 
-## 👥 Authors <a name="authors"></a>
+## 👥 Author <a name="authors"></a>
 
-> Mention all of the collaborators of this project.
+👤 **Muzaffer Dler**
 
-👤 **Author1**
-
-- GitHub: [@Boku52500](https://github.com/boku52500)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
+- GitHub: [@Giorgi Bokuchava](https://github.com/Boku52500)
+- LinkedIn: [@Giorgi Bokuchava](https://www.linkedin.com/in/giorgi-bokuchava-430252240/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -201,13 +143,19 @@ Feel free to check the [issues page](../../issues/).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- FUTURE FEATURES -->
+
+## 🔭 Future Features <a name="future-features"></a>
+
+- [ ] **[purchase your favorite book]**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 <!-- SUPPORT -->
 
 ## ⭐️ Show your support <a name="support"></a>
 
-> Write a message to encourage readers to support your project
-
-If you like this project...
+If you like this project feel free to leave a star ⭐️
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -215,14 +163,21 @@ If you like this project...
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-> Give credit to everyone who inspired your codebase.
-
-I would like to thank...
+Huge props to Microverse team.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FAQ (optional) -->
 
+## ❓ FAQ <a name="faq"></a>
+
+- **[How to run this project?]**
+
+  - [You need [Node.js](https://nodejs.org/en/download/) in your computer, and in the root of the project write `npm start` in the terminal]
+
+- **[Is it open source?]**
+
+  - [Yes you are allowed to use the project in any way]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
