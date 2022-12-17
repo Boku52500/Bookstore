@@ -126,7 +126,7 @@ You can deploy this project using: `npm run deploy`
 
 ## 👥 Author <a name="authors"></a>
 
-👤 **Muzaffer Dler**
+👤 **Giorgi Bokuchava**
 
 - GitHub: [@Giorgi Bokuchava](https://github.com/Boku52500)
 - LinkedIn: [@Giorgi Bokuchava](https://www.linkedin.com/in/giorgi-bokuchava-430252240/)
